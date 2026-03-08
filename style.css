@@ -52,7 +52,31 @@ a {
   padding: 10px;
   background-color: rgb(255, 204, 127);
   border: 1px solid black;
+  position: relative;
 }
 .dropdown > li:hover {
-  background-color:aquamarine;
+  background-color: aquamarine;
+  .sub-dropdown {
+    display: flex;
+  }
+}
+
+.sub-dropdown {
+  list-style: none;
+  position: absolute;
+  z-index: 1;
+  display: none;
+  flex-direction: column;
+  gap: 2px;
+  left: 100%;
+  top: 0;
+}
+
+.sub-dropdown > li {
+  padding: 10px;
+  background-color: rgb(255, 204, 127);
+  border: 1px solid black;
+}
+.sub-dropdown > li:hover {
+  background-color: aquamarine;
 }
